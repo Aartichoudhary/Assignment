@@ -1,9 +1,10 @@
 <p>You're logged in with Angular 8!!</p>
 <label for="date">Choose a Date Format:</label>&nbsp;&nbsp;
 <select [(ngModel)]="selectedLevel" value="item" (change)="selected()">
-  <option *ngFor="let item of data" class="form-control col-sm-4" [ngValue]="item" placeholder="choose ">12hrTo24hrs{{item.id}}</option>
+  <option *ngFor="let item of data" class="form-control col-sm-4" [ngValue]="item" placeholder="choose ">12hrTo24hrs{{today}}</option>
 </select>
-{{selectedLevel.id|date:'MM/dd/yyyy hh:mm:ss a'}}
+<br>
+<b>{{selectedLevel.id}}</b>
 <h3>All login audit :</h3>
 <div *ngIf="isLoading" class="spinner-border" role="status">
   <span class="sr-only">Loading...</span>
